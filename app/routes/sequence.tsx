@@ -4,6 +4,7 @@ import { ClientOnly } from "../components/ClientOnly";
 import { ThemeToggle } from "../components/ThemeToggle";
 import PillNav from "../components/PillNav";
 import Footer from "../components/Footer";
+import { MolstarViewer } from "../components/MolstarViewer";
 
 export function meta() {
   return [
@@ -20,6 +21,7 @@ export default function Sequence() {
 
   const navItems = [
     { label: "Browse", href: "/browse" },
+    
   ];
 
   useEffect(() => {
@@ -129,15 +131,24 @@ export default function Sequence() {
               </div>
             </div>
 
-            <div className="mb-8">
-              <a
-                href={`https://api.paulverot.fr/sequences/${id}/pdb`}
-                target="_blank"
-                className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition text-sm"
-              >
-                Download PDB file ↓
-              </a>
+
+
+                <div className="mb-8" aria-label="Interactive 3D molecular structure viewer" role="region">
+              <h2 className="text-lg font-bold text-primary mb-4">3D Structure</h2>
+              <ClientOnly>
+                <MolstarViewer url={`/api/pdb/${id}`} format="pdb" />
+              </ClientOnly>
+              <div className="mt-4">
+                <a
+                  href={`https://api.paulverot.fr/sequences/${id}/pdb`}
+                  target="_blank"
+                  className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 transition text-sm"
+                >
+                  Download PDB file ↓
+                </a>
+              </div>
             </div>
+
 
             <h2 className="text-lg font-bold text-foreground mb-4">
               Interframes ({sequence.interframes?.length || 0} steps)
