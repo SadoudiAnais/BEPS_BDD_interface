@@ -77,7 +77,7 @@ body {
   --secondary: oklch(0.62 0.08 206);
   /* Cool Steel #7e99ad */
   --secondary-foreground: oklch(0.2 0.12 285);
-  --muted: oklch(0.62 0.08 29);
+  --muted: oklch(49.552% 0.12182 258.402);
   /* Dusty Taupe #a9927d */
   --muted-foreground: oklch(0.35 0.04 29);
   --accent: oklch(0.42 0.22 12);
@@ -92,7 +92,7 @@ body {
 
   --chart-1: oklch(0.2 0.12 285);
   --chart-2: oklch(0.62 0.08 206);
-  --chart-3: oklch(0.62 0.08 29);
+  --chart-3: oklch(59.58% 0.09238 226.1);
   --chart-4: oklch(0.42 0.22 12);
   --chart-5: oklch(0.46 0.25 350);
 
@@ -109,7 +109,7 @@ body {
   --nav-base: #0a3d67;
   --nav-pill-bg: #ffffff;
   --nav-pill-text: #0a3d67;
-  --nav-hover-bg: #a9927d;
+  --nav-hover-bg: #3f94e5;
   --nav-hover-text: #ffffff;
 }
 
@@ -143,7 +143,7 @@ body {
   --ring: oklch(0.68 0.08 206);
 
   --chart-1: oklch(0.68 0.08 206);
-  --chart-2: oklch(0.62 0.08 29);
+  --chart-2: oklch(57.739% 0.10554 263.779);
   --chart-3: oklch(0.42 0.22 12);
   --chart-4: oklch(0.46 0.25 350);
   --chart-5: oklch(0.68 0.08 206);
