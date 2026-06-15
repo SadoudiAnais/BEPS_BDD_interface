@@ -116,7 +116,9 @@ export default function Sequence() {
   }, []);
 
   const navItems = [
+    { label: "Home", href: "/" },
     { label: "Browse", href: "/browse" },
+    { label: "About", href: "/about" },
   ];
 
   return (
